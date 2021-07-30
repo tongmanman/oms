@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'user'], function () {
+Route::group(['prefix' => 'users'], function () {
     Route::view('/', 'user/index');
 });
 
