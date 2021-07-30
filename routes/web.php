@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => 'user'], function () {
+    Route::view('/', 'user/index');
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::view('/', 'admin/index');
+    Route::view('/product_category', 'admin/product_category');
+    Route::view('/product_category_add', 'admin/product_category_add');
 });

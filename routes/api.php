@@ -1,7 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+//注册登录
+Route::post('/signup', [UserController::class, 'Signup']);
+Route::post('/signin', [UserController::class, 'Signin']);
+
+//用户
+Route::group(['prefix' => 'user'], function () {
+});
+
+//管理员
+Route::group(['prefix' => 'admin'], function () {
+    //产品类别
+    Route::post('/ProductCategory', [ProductCategoryController::class, 'Store']);
+    // Route::delete('/ProductCategory', 'ProductCategoryController@Delete');
+    // Route::put('/ProductCategory', 'ProductCategoryController@Update');
+    // Route::get('/ProductCategory', 'ProductCategoryController@View');
 });
