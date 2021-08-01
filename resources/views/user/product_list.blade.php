@@ -2,15 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>童满满生活馆</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-    <link rel="stylesheet" href="lib/weui.min.css">
-    <link rel="stylesheet" href="css/jquery-weui.css">
-    <link rel="stylesheet" href="css/style.css">
+    @include('user.index_header')
 </head>
 
 <body ontouchstart>
@@ -57,7 +49,7 @@
         <section class="menu-right padding-all j-content">
             <h5>酒水食品</h5>
             <ul>
-                <li class="w-3"><a href="{{ url('user/product_detail') }}"></a> <img src="upload/pro3.jpg"><span>酒水食品</span></li>
+                <li class="w-3"><a href="{{ url('users/product_detail') }}"></a> <img src="upload/pro3.jpg"><span>酒水食品</span></li>
                 <li class="w-3"><a href="pro_list.html"></a> <img src="upload/pro3.jpg"><span>酒水食品</span></li>
                 <li class="w-3"><a href="pro_list.html"></a> <img src="upload/pro3.jpg"><span>酒水食品</span></li>
                 <li class="w-3"><a href="pro_list.html"></a> <img src="upload/pro3.jpg"><span>酒水食品</span></li>

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductCategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//注册登录
+Route::post('/signup', [UserController::class, 'Signup']);
+Route::post('/signin', [UserController::class, 'Signin']);
+
+//用户
 Route::group(['prefix' => 'users'], function () {
     Route::view('/', 'user/index');
-});
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Route::view('/', 'admin/index');
-    Route::view('/product_category', 'admin/product_category');
-    Route::view('/product_category_add', 'admin/product_category_add');
+    Route::view('/product_list', 'user/product_list');
 });
