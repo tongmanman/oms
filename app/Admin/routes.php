@@ -14,7 +14,6 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
-    $router->resource('product_category', 'FrontProductCategoryController');
+    $router->resource('product_category', 'OmsProductCategoryController');
+    $router->resource('product', 'OmsProductController');
 });
-
-

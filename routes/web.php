@@ -1,9 +1,7 @@
 <?php
 
+use App\Http\Controllers\OmsUserController;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +15,10 @@ use App\Http\Controllers\ProductCategoryController;
 */
 
 //注册登录
-Route::post('/signup', [UserController::class, 'Signup']);
-Route::post('/signin', [UserController::class, 'Signin']);
+Route::post('/signup', [OmsUserController::class, 'Signup']);
+Route::post('/signin', [OmsUserController::class, 'Signin']);
 
 //用户
-Route::group(['prefix' => 'users'], function () {
-    Route::view('/', 'user/index');
-    Route::view('/product_list', 'user/product_list');
-});
+Route::view('/', 'index');
+Route::view('/signup', 'signup');
+Route::view('/product_list', 'product_list');
