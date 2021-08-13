@@ -17,7 +17,7 @@ class OmsProductSku extends EloquentRepository
 
     public static function GetProductDetail(Request $request)
     {
-        return view('product_detail', ['ProductInfo' => Omsproduct::GetProductInfoByID($request->id), 'ProductSkus' => Model::where('product_id', $request->id)->where('show', 1)->get()]);
+        return view('product_detail', ['ProductInfo' => OmsProduct::GetProductInfoByID($request->id), 'ProductSkus' => Model::where('product_id', $request->id)->where('show', 1)->get()]);
     }
 
     public static function GetProductSkuInfo(Request $request)
