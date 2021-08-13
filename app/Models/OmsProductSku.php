@@ -12,7 +12,7 @@ class OmsProductSku extends Model
     protected $table = 'oms_product_sku';
     public $timestamps = false;
 
-    protected $fillable = ['sku_name', 'member_price', 'agent_price', 'show'];
+    protected $fillable = ['sku_name', 'image', 'member_price', 'agent_price', 'show'];
 
     public function Products()
     {

@@ -26,6 +26,6 @@ function checkIndentity(Request $request)
 
 function saveSession(OmsUser $user)
 {
-    Session::put('user.id', $user->id);
-    Session::put('user.role', $user->is_agent == 0 ? 'member' : 'agent');
+    session()->put("user.id", $user->id);
+    session()->put("user.role", $user->is_agent == 0 ? 'member' : 'agent');
 }

@@ -63,6 +63,7 @@ class OmsProductController extends AdminController
             $form->switch('show');
             $form->hasMany('ProductSkus', function (NestedForm $form) {
                 $form->text('sku_name');
+                $form->text('image');
                 $form->text('member_price');
                 $form->text('agent_price');
                 $form->switch('show');

@@ -16,7 +16,7 @@ class OmsProductCategory extends EloquentRepository
 
     public static function GetRootCategory()
     {
-        return Model::where('parent_id', 0)->get(['id', 'name as text', 'parent_id']);
+        return Model::where('parent_id', 0)->orderBy('order')->get(['id', 'name as text', 'parent_id']);
     }
 
     public static function GetChildCategory($id)

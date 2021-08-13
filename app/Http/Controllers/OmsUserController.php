@@ -43,4 +43,12 @@ class OmsUserController extends Controller
         saveSession(OmsUser::find($u->id));
         return responseToJson(Response::HTTP_CREATED, '注册成功');
     }
+
+    //登出
+    public function Signout()
+    {
+        session()->forget("user.id");
+        session()->forget("user.role");
+        return responseToJson(Response::HTTP_OK, '登出成功');
+    }
 }

@@ -36,15 +36,25 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection sku_id
+     * @property Grid\Column|Collection qty
+     * @property Grid\Column|Collection create_time
+     * @property Grid\Column|Collection order_num
+     * @property Grid\Column|Collection status
+     * @property Grid\Column|Collection mobile
+     * @property Grid\Column|Collection province
+     * @property Grid\Column|Collection city
+     * @property Grid\Column|Collection area
+     * @property Grid\Column|Collection address
+     * @property Grid\Column|Collection order_id
+     * @property Grid\Column|Collection price
      * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection image
-     * @property Grid\Column|Collection create_time
      * @property Grid\Column|Collection product_id
      * @property Grid\Column|Collection sku_name
      * @property Grid\Column|Collection member_price
      * @property Grid\Column|Collection agent_price
-     * @property Grid\Column|Collection mobile
-     * @property Grid\Column|Collection level
+     * @property Grid\Column|Collection is_agent
      *
      * @method Grid\Column|Collection id(string $label = null)
      * @method Grid\Column|Collection name(string $label = null)
@@ -71,15 +81,25 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection sku_id(string $label = null)
+     * @method Grid\Column|Collection qty(string $label = null)
+     * @method Grid\Column|Collection create_time(string $label = null)
+     * @method Grid\Column|Collection order_num(string $label = null)
+     * @method Grid\Column|Collection status(string $label = null)
+     * @method Grid\Column|Collection mobile(string $label = null)
+     * @method Grid\Column|Collection province(string $label = null)
+     * @method Grid\Column|Collection city(string $label = null)
+     * @method Grid\Column|Collection area(string $label = null)
+     * @method Grid\Column|Collection address(string $label = null)
+     * @method Grid\Column|Collection order_id(string $label = null)
+     * @method Grid\Column|Collection price(string $label = null)
      * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection image(string $label = null)
-     * @method Grid\Column|Collection create_time(string $label = null)
      * @method Grid\Column|Collection product_id(string $label = null)
      * @method Grid\Column|Collection sku_name(string $label = null)
      * @method Grid\Column|Collection member_price(string $label = null)
      * @method Grid\Column|Collection agent_price(string $label = null)
-     * @method Grid\Column|Collection mobile(string $label = null)
-     * @method Grid\Column|Collection level(string $label = null)
+     * @method Grid\Column|Collection is_agent(string $label = null)
      */
     class Grid {}
 
@@ -111,15 +131,25 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection sku_id
+     * @property Show\Field|Collection qty
+     * @property Show\Field|Collection create_time
+     * @property Show\Field|Collection order_num
+     * @property Show\Field|Collection status
+     * @property Show\Field|Collection mobile
+     * @property Show\Field|Collection province
+     * @property Show\Field|Collection city
+     * @property Show\Field|Collection area
+     * @property Show\Field|Collection address
+     * @property Show\Field|Collection order_id
+     * @property Show\Field|Collection price
      * @property Show\Field|Collection category_id
      * @property Show\Field|Collection image
-     * @property Show\Field|Collection create_time
      * @property Show\Field|Collection product_id
      * @property Show\Field|Collection sku_name
      * @property Show\Field|Collection member_price
      * @property Show\Field|Collection agent_price
-     * @property Show\Field|Collection mobile
-     * @property Show\Field|Collection level
+     * @property Show\Field|Collection is_agent
      *
      * @method Show\Field|Collection id(string $label = null)
      * @method Show\Field|Collection name(string $label = null)
@@ -146,15 +176,25 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection sku_id(string $label = null)
+     * @method Show\Field|Collection qty(string $label = null)
+     * @method Show\Field|Collection create_time(string $label = null)
+     * @method Show\Field|Collection order_num(string $label = null)
+     * @method Show\Field|Collection status(string $label = null)
+     * @method Show\Field|Collection mobile(string $label = null)
+     * @method Show\Field|Collection province(string $label = null)
+     * @method Show\Field|Collection city(string $label = null)
+     * @method Show\Field|Collection area(string $label = null)
+     * @method Show\Field|Collection address(string $label = null)
+     * @method Show\Field|Collection order_id(string $label = null)
+     * @method Show\Field|Collection price(string $label = null)
      * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection image(string $label = null)
-     * @method Show\Field|Collection create_time(string $label = null)
      * @method Show\Field|Collection product_id(string $label = null)
      * @method Show\Field|Collection sku_name(string $label = null)
      * @method Show\Field|Collection member_price(string $label = null)
      * @method Show\Field|Collection agent_price(string $label = null)
-     * @method Show\Field|Collection mobile(string $label = null)
-     * @method Show\Field|Collection level(string $label = null)
+     * @method Show\Field|Collection is_agent(string $label = null)
      */
     class Show {}
 

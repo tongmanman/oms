@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -14,13 +15,13 @@
                     <span class="eamil-icon common-icon">
                         <img src="{{asset('images/eamil.png')}}" />
                     </span>
-                    <input type="tel" id="mobile" value="" placeholder="手机" class="weui-input" maxlength="11" />
+                    <input type="tel" id="mobile" value="" placeholder="手机" class="weui-input" maxlength="11" value="13861778267" />
                 </div>
                 <div class="login-user-pasw common-div">
                     <span class="pasw-icon common-icon">
                         <img src="{{asset('images/password.png')}}" />
                     </span>
-                    <input type="password" id="password" value="" placeholder="密码" />
+                    <input type="password" id="password" value="" placeholder="密码" value="1" />
                 </div>
                 <a href="javascript:;" class="login-btn common-div" id="submitForm">登陆</a>
             </form>
@@ -30,14 +31,8 @@
             <a href="{{url('signup')}}">注册</a>
         </div>
     </div>
-    <script src="{{asset('lib/jquery-2.1.4.js')}}"></script>
-    <script src="{{asset('lib/fastclick.js')}}"></script>
-    <script src="{{asset('js/jquery.Spinner.js')}}"></script>
-    <script src="{{asset('js/jquery-weui.js')}}"></script>
+    @include('js')
     <script>
-        $(function() {
-            FastClick.attach(document.body);
-        });
         $("#submitForm").click(function() {
             $.ajax({
                 url: "/signin",
@@ -51,9 +46,9 @@
                 },
                 success: function(data) {
                     if (String(data.code).startsWith('2')) {
-                        location.href = "{{url('product_list')}}";
+                        location.href = "/product_list";
                     } else {
-                        alert(data.msg);
+                        $.toast(data.msg);
                     }
                 }
             });

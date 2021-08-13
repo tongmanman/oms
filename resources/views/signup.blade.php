@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -36,14 +37,11 @@
             <a href="{{url('index')}}">登录</a>
         </div>
     </div>
-    <script src="{{asset('lib/jquery-2.1.4.js')}}"></script>
-    <script src="{{asset('lib/fastclick.js')}}"></script>
-    <script src="{{asset('js/jquery.Spinner.js')}}"></script>
-    <script src="{{asset('js/jquery-weui.js')}}"></script>
+    @include('js')
     <script>
         $("#submitForm").click(function() {
             if ($('#password').val() != $('#password2').val()) {
-                alert('两次密码输入不同');
+                $.toast('两次密码输入不同');
                 return;
             }
             $.ajax({
@@ -60,7 +58,7 @@
                     if (String(data.code).startsWith('2')) {
                         //      location.href = "{{url('product_list')}}";
                     } else {
-                        alert(data.msg);
+                        $.toast(data.msg);
                     }
                 }
             });
