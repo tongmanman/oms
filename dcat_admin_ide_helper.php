@@ -37,7 +37,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
      * @property Grid\Column|Collection sku_id
-     * @property Grid\Column|Collection qty
      * @property Grid\Column|Collection create_time
      * @property Grid\Column|Collection order_num
      * @property Grid\Column|Collection status
@@ -48,6 +47,7 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection address
      * @property Grid\Column|Collection order_id
      * @property Grid\Column|Collection price
+     * @property Grid\Column|Collection qty
      * @property Grid\Column|Collection category_id
      * @property Grid\Column|Collection image
      * @property Grid\Column|Collection product_id
@@ -82,7 +82,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
      * @method Grid\Column|Collection sku_id(string $label = null)
-     * @method Grid\Column|Collection qty(string $label = null)
      * @method Grid\Column|Collection create_time(string $label = null)
      * @method Grid\Column|Collection order_num(string $label = null)
      * @method Grid\Column|Collection status(string $label = null)
@@ -93,6 +92,7 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection address(string $label = null)
      * @method Grid\Column|Collection order_id(string $label = null)
      * @method Grid\Column|Collection price(string $label = null)
+     * @method Grid\Column|Collection qty(string $label = null)
      * @method Grid\Column|Collection category_id(string $label = null)
      * @method Grid\Column|Collection image(string $label = null)
      * @method Grid\Column|Collection product_id(string $label = null)
@@ -132,7 +132,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
      * @property Show\Field|Collection sku_id
-     * @property Show\Field|Collection qty
      * @property Show\Field|Collection create_time
      * @property Show\Field|Collection order_num
      * @property Show\Field|Collection status
@@ -143,6 +142,7 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection address
      * @property Show\Field|Collection order_id
      * @property Show\Field|Collection price
+     * @property Show\Field|Collection qty
      * @property Show\Field|Collection category_id
      * @property Show\Field|Collection image
      * @property Show\Field|Collection product_id
@@ -177,7 +177,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
      * @method Show\Field|Collection sku_id(string $label = null)
-     * @method Show\Field|Collection qty(string $label = null)
      * @method Show\Field|Collection create_time(string $label = null)
      * @method Show\Field|Collection order_num(string $label = null)
      * @method Show\Field|Collection status(string $label = null)
@@ -188,6 +187,7 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection address(string $label = null)
      * @method Show\Field|Collection order_id(string $label = null)
      * @method Show\Field|Collection price(string $label = null)
+     * @method Show\Field|Collection qty(string $label = null)
      * @method Show\Field|Collection category_id(string $label = null)
      * @method Show\Field|Collection image(string $label = null)
      * @method Show\Field|Collection product_id(string $label = null)

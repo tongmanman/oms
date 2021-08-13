@@ -14,6 +14,13 @@ Route::group([
 
     $router->get('/', 'HomeController@index');
 
+    //用户管理
+    $router->resource('user', 'OmsUserController');
+
+    //产品管理
     $router->resource('product_category', 'OmsProductCategoryController');
     $router->resource('product', 'OmsProductController');
+
+    //订单管理
+    $router->resource('order', 'OmsOrderController');
 });

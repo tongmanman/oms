@@ -22,13 +22,13 @@
                             </div>
                             <span class="weui-cell__ft"></span>
                         </a>
-                        <a class="weui-cell weui-cell_access" href="password.html">
+                        <!-- <a class="weui-cell weui-cell_access" href="password.html">
                             <div class="weui-cell__hd"><img src="images/center-icon-dlmm.png" alt="" class="center-list-icon"></div>
                             <div class="weui-cell__bd weui-cell_primary">
                                 <p class="center-list-txt">密码修改</p>
                             </div>
                             <span class="weui-cell__ft"></span>
-                        </a>
+                        </a> -->
                         <a class="weui-cell weui-cell_access" href="javascript:void(0)" onclick="Signout()">
                             <div class="weui-cell__hd"><img src="images/center-icon-out.png" alt="" class="center-list-icon"></div>
                             <div class="weui-cell__bd weui-cell_primary">

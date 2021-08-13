@@ -1,4 +1,4 @@
-<?php 
+<?php
 return [
     'labels' => [
         'OmsOrder' => '订单管理',
@@ -13,7 +13,8 @@ return [
         'city' => '市',
         'area' => '区',
         'address' => '地址',
+        'create_time' => '下单时间',
+        'status' => '订单状态'
     ],
-    'options' => [
-    ],
+    'options' => [],
 ];

@@ -18,20 +18,19 @@ class OmsOrderController extends AdminController
     protected function grid()
     {
         return Grid::make(new OmsOrder(), function (Grid $grid) {
-            $grid->column('id')->sortable();
             $grid->column('order_num');
-            $grid->column('user_id');
             $grid->column('name');
             $grid->column('mobile');
-            $grid->column('province');
-            $grid->column('city');
-            $grid->column('area');
-            $grid->column('address');
-        
+            $grid->column('status');
+            $grid->column('create_time');
+            $grid->model()->orderBy('create_time', 'desc');
             $grid->filter(function (Grid\Filter $filter) {
-                $filter->equal('id');
-        
+                $filter->equal('order_num');
             });
+            $grid->disableViewButton();
+            $grid->disableEditButton();
+            $grid->showQuickEditButton();
+            $grid->disableCreateButton();
         });
     }
 
