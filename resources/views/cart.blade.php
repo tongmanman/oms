@@ -77,7 +77,7 @@
                         collection: collection
                     },
                     success: function(data) {
-                        location.href = "{{url('address')}}";
+                        location.href = "/address";
                     }
                 });
             }
@@ -123,8 +123,8 @@
                         CartItemID: $currentID
                     },
                     success: function(data) {
-                        $.toast("已删除");
-                        location.href = "{{url('cart')}}";
+                        $.toast("已删除", "text");
+                        location.href = "/cart";
                     }
                 });
             }, function() {});

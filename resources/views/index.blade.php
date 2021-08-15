@@ -28,7 +28,7 @@
         </div>
         <div class="forgets">
             <!-- <a href="psd_chage.html">忘记密码？</a> -->
-            <a href="{{url('signup')}}">注册</a>
+            <a href="/signup">注册</a>
         </div>
     </div>
     @include('js')
@@ -48,7 +48,7 @@
                     if (String(data.code).startsWith('2')) {
                         location.href = "/product_list";
                     } else {
-                        $.toast(data.msg);
+                        $.toast(data.msg, "text");
                     }
                 }
             });

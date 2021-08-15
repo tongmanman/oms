@@ -14,6 +14,6 @@ class OmsProduct extends Model
 
     public function ProductSkus()
     {
-        return $this->hasMany(OmsProductSku::class, 'product_id', 'id');
+        return $this->hasMany(OmsProductSku::class, 'product_id');
     }
 }

@@ -16,6 +16,6 @@ class OmsProductSku extends Model
 
     public function Products()
     {
-        return $this->belongsTo(OmsProduct::class, 'product_id', 'id');
+        return $this->belongsTo(OmsProduct::class, 'product_id');
     }
 }

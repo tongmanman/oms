@@ -33,7 +33,7 @@ class OmsProductController extends AdminController
             $grid->disableViewButton();
             $grid->disableEditButton();
             $grid->showQuickEditButton();
-            $grid->setDialogFormDimensions('50%', '50%');
+            $grid->setDialogFormDimensions('80%', '80%');
         });
     }
 
@@ -44,8 +44,7 @@ class OmsProductController extends AdminController
      */
     protected function form()
     {
-        $repository = new OmsProduct(['ProductSkus']);
-        return Form::make($repository, function (Form $form) {
+        return Form::make(OmsProduct::with("ProductSkus"), function (Form $form) {
             $form->select('category_id', '产品目录')->options(function () {
                 $options = OmsProductCategory::GetRootCategory();
                 $selectOption = [];

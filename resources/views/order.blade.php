@@ -42,7 +42,7 @@
                         id: id
                     },
                     success: function(data) {
-                        $.toast("操作成功");
+                        $.toast("操作成功", "text");
                         location.href = "/order";
                     }
                 });

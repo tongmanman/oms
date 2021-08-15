@@ -48,19 +48,19 @@
 
         function makeOrder() {
             if ($('#name').val().length == 0) {
-                $.toast('收货人不能为空');
+                $.toast('收货人不能为空', "text");
                 return;
             }
             if ($('#mobile').val().length == 0) {
-                $.toast('手机号不能为空');
+                $.toast('手机号不能为空', "text");
                 return;
             }
             if ($('#pca').val().length == 0) {
-                $.toast('所在地区不能为空');
+                $.toast('所在地区不能为空', "text");
                 return;
             }
             if ($('#address').val().length == 0) {
-                $.toast('详细地址不能为空');
+                $.toast('详细地址不能为空', "text");
                 return;
             }
             $.ajax({
@@ -76,7 +76,7 @@
                     address: $('#address').val()
                 },
                 success: function(data) {
-                    location.href = "{{url('order')}}";
+                    location.href = "/order";
                 }
             });
         }

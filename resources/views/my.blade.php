@@ -58,7 +58,7 @@
                     if (String(data.code).startsWith('2')) {
                         location.href = "/";
                     } else {
-                        $.toast(data.msg);
+                        $.toast(data.msg, "text");
                     }
                 }
             });

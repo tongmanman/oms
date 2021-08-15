@@ -34,14 +34,14 @@
         </div>
         <div class="forgets">
             <!-- <a href="psd_chage.html">忘记密码？</a> -->
-            <a href="{{url('index')}}">登录</a>
+            <a href="/">登录</a>
         </div>
     </div>
     @include('js')
     <script>
         $("#submitForm").click(function() {
             if ($('#password').val() != $('#password2').val()) {
-                $.toast('两次密码输入不同');
+                $.toast('两次密码输入不同', "text");
                 return;
             }
             $.ajax({
@@ -56,9 +56,9 @@
                 },
                 success: function(data) {
                     if (String(data.code).startsWith('2')) {
-                        //      location.href = "{{url('product_list')}}";
+                        location.href = "/product_list";
                     } else {
-                        $.toast(data.msg);
+                        $.toast(data.msg, "text");
                     }
                 }
             });

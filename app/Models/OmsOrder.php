@@ -11,5 +11,9 @@ class OmsOrder extends Model
     use HasDateTimeFormatter;
     protected $table = 'oms_order';
     public $timestamps = false;
-    protected $fillable = ['status'];
+
+    public function OrderDetail()
+    {
+        return $this->hasMany(OmsOrderDetail::class, 'order_id');
+    }
 }
