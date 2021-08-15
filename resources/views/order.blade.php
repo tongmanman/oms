@@ -76,7 +76,7 @@
                         str += '<div class="weui-media-box__bd  pd-10">';
                         $.each(data[index].detail, function(i) {
                             str += '<div class="weui-media-box_appmsg ord-pro-list">';
-                            str += '<div class="weui-media-box__hd"><a href="/product_detail/' + data[index].detail[i].p_id + '"><img class="weui-media-box__thumb" src="' + data[index].detail[i].sku_image + '" alt=""></a></div>';
+                            str += '<div class="weui-media-box__hd"><a href="/product_detail/' + data[index].detail[i].p_id + '"><img class="weui-media-box__thumb" src="' + data[index].detail[i].p_image + '" alt=""></a></div>';
                             str += '<div class="weui-media-box__bd">';
                             str += '<h1 class="weui-media-box__desc"><a href="/product_detail/' + data[index].detail[i].p_id + '" class="ord-pro-link">' + data[index].detail[i].p_name + '</a></h1>';
                             str += '<p class="weui-media-box__desc">规格：<span>' + data[index].detail[i].sku_name + '</span></p>';

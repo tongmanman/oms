@@ -32,7 +32,7 @@ class OmsCart extends EloquentRepository
                               oms_product.name AS p_name,
                               oms_product_sku.sku_name AS s_name,
                               oms_cart.id AS s_id,
-                              oms_product_sku.image AS s_image,
+                              oms_product.image AS p_image,
                               oms_product_sku." . session("user.role") . "_price AS s_price 
                         FROM oms_cart,oms_product_category,oms_product,oms_product_sku 
                         WHERE oms_cart.sku_id = oms_product_sku.id 

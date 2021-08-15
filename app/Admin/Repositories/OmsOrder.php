@@ -69,7 +69,7 @@ class OmsOrder extends EloquentRepository
             $OrderDetails = DB::select("SELECT  oms_product.id AS p_id, 
                                                 oms_product.name AS p_name, 
                                                 oms_product_sku.sku_name AS sku_name, 
-                                                oms_product_sku.image AS sku_image, 
+                                                oms_product.image AS p_image, 
                                                 oms_order_detail.price AS price, 
                                                 oms_order_detail.qty AS qty
                                                 FROM oms_order,oms_order_detail,oms_product,oms_product_sku
@@ -86,12 +86,12 @@ class OmsOrder extends EloquentRepository
                 $ItemArray["p_id"] = $OD->p_id;
                 $ItemArray["p_name"] = $OD->p_name;
                 $ItemArray["sku_name"] = $OD->sku_name;
-                $ItemArray["sku_image"] = $OD->sku_image;
+                $ItemArray["p_image"] = $OD->p_image;
                 $ItemArray["price"] = $OD->price;
                 $ItemArray["qty"] = $OD->qty;
                 array_push($temp["detail"], $ItemArray);
             }
-            $temp["price"] = $PriceCount;
+            $temp["price"] = round($PriceCount, 2);
             array_push($ReturnArray, $temp);
         }
         return $ReturnArray;

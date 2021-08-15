@@ -40,7 +40,7 @@
                     str += '<input type="checkbox" class="weui-check" name="cartpro" id="cart-pto' + index + 1 + '" value="' + data[index].s_id + '"><i class="weui-icon-checked"></i></div>';
                     str += '</label></div>';
                     str += '<div class="weui-media-box__hd">';
-                    str += '<a href="pro_info.html"><img class="weui-media-box__thumb" src="' + data[index].s_image + '" alt=""></a></div>';
+                    str += '<a href="pro_info.html"><img class="weui-media-box__thumb" src="' + data[index].p_image + '" alt=""></a></div>';
                     str += '<div class="weui-media-box__bd">';
                     str += '<h1 class="weui-media-box__desc">' + data[index].p_name + '</h1>';
                     str += '<p class="weui-media-box__desc">规格：<span>' + data[index].s_name + '</span></p>';

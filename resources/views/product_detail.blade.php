@@ -15,7 +15,7 @@
                     <!--主图轮播-->
                     <div class="swiper-container swiper-zhutu">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img id="CurrentImage" src="" /></div>
+                            <div class="swiper-slide"><img id="CurrentImage" src="{{$ProductInfo->image}}" /></div>
                         </div>
 
                     </div>
@@ -103,7 +103,7 @@
                     ProductID: _ProductID
                 },
                 success: function(data) {
-                    $("#CurrentImage").attr("src", data.image);
+                    //    $("#CurrentImage").attr("src", data.image);
                     $("#CurrentPrice").html(data.price);
                 }
             });
