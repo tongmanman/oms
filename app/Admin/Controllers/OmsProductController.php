@@ -23,7 +23,7 @@ class OmsProductController extends AdminController
             $grid->column('category_id')->display(function ($category_id) {
                 return OmsProductCategory::GetCategoryNameByID($category_id);
             });
-            $grid->column('name');
+            $grid->column('name')->editable();
             $grid->column('image')->image('', 50);
             $grid->column('show')->switch();
             $grid->model()->orderBy('create_time', 'desc');
@@ -71,7 +71,7 @@ class OmsProductController extends AdminController
             });
             $form->text('name');
             $form->text('image');
-            $form->switch('show');
+            //$form->switch('show');
             $form->hasMany('ProductSkus', function (NestedForm $form) {
                 $form->text('sku_name');
                 //$form->text('image');

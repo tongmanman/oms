@@ -25,7 +25,9 @@ class OmsOrderController extends AdminController
     protected function grid()
     {
         return Grid::make(new OmsOrder(), function (Grid $grid) {
-            $grid->column('order_num');
+            $grid->column('order_num')->width('15%');
+            $grid->column('name');
+            $grid->column('mobile');
             $grid->column('id', '金额')->display(function ($id) {
                 return OmsOrderDetail::where('order_id', $id)->first(DB::raw('ROUND(SUM(price*qty),2) as amount'))->amount;
             });
@@ -35,9 +37,7 @@ class OmsOrderController extends AdminController
                 3 => "已付款",
                 4 => "已发货"
             ]);
-            $grid->column('name');
-            $grid->column('mobile');
-            $grid->column('create_time');
+            $grid->column('create_time')->width('15%');
             $grid->model()->orderBy('create_time', 'desc');
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('order_num');
