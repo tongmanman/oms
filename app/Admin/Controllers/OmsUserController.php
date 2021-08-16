@@ -20,7 +20,7 @@ class OmsUserController extends AdminController
         return Grid::make(new OmsUser(), function (Grid $grid) {
             $grid->column('mobile');
             $grid->column('is_agent')->switch();
-
+            $grid->model()->orderBy('create_time', 'desc');
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('mobile');
             });

@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Repositories\OmsOrder;
+use App\Models\OmsOrderDetail;
 use App\Models\OmsProduct;
 use App\Models\OmsProductCategory;
 use App\Models\OmsProductSku;
@@ -11,6 +12,7 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Form\NestedForm;
 use Dcat\Admin\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\DB;
 
 class OmsOrderController extends AdminController
 {
@@ -24,6 +26,9 @@ class OmsOrderController extends AdminController
     {
         return Grid::make(new OmsOrder(), function (Grid $grid) {
             $grid->column('order_num');
+            $grid->column('id', '金额')->display(function ($id) {
+                return OmsOrderDetail::where('order_id', $id)->first(DB::raw('ROUND(SUM(price*qty),2) as amount'))->amount;
+            });
             $grid->column('status')->using([
                 1 => "待确认",
                 2 => "待付款",

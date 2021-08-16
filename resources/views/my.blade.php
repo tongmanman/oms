@@ -32,7 +32,7 @@
                         <a class="weui-cell weui-cell_access" href="javascript:void(0)" onclick="Signout()">
                             <div class="weui-cell__hd"><img src="images/center-icon-out.png" alt="" class="center-list-icon"></div>
                             <div class="weui-cell__bd weui-cell_primary">
-                                <p class="center-list-txt">退出账号</p>
+                                <p class="center-list-txt">退出</p>
                             </div>
                             <span class="weui-cell__ft"></span>
                         </a>
@@ -48,20 +48,22 @@
         $('#my').addClass('weui-bar__item--on');
 
         function Signout() {
-            $.ajax({
-                url: "/signout",
-                type: "post",
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                },
-                success: function(data) {
-                    if (String(data.code).startsWith('2')) {
-                        location.href = "/";
-                    } else {
-                        $.toast(data.msg, "text");
+            $.confirm("您确定退出吗?", function() {
+                $.ajax({
+                    url: "/signout",
+                    type: "post",
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    success: function(data) {
+                        if (String(data.code).startsWith('2')) {
+                            location.href = "/";
+                        } else {
+                            $.toast(data.msg, "text");
+                        }
                     }
-                }
-            });
+                });
+            }, function() {});
         }
     </script>
 </body>

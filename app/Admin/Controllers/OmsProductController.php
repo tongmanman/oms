@@ -26,9 +26,21 @@ class OmsProductController extends AdminController
             $grid->column('name');
             $grid->column('image')->image('', 50);
             $grid->column('show')->switch();
-
+            $grid->model()->orderBy('create_time', 'desc');
             $grid->filter(function (Filter $filter) {
                 $filter->like('name');
+                $filter->equal('category_id')->select(function () {
+                    $options = OmsProductCategory::GetRootCategory();
+                    $selectOption = [];
+                    foreach ($options as $option) {
+                        $selectOption[$option->id] = $option->text;
+                        $ChildCategorys = OmsProductCategory::GetChildCategory($option->id);
+                        foreach ($ChildCategorys as $ChildCategory) {
+                            $selectOption[$ChildCategory->id] = '|——' . $ChildCategory->text;
+                        }
+                    }
+                    return $selectOption;
+                });
             });
             $grid->disableViewButton();
             $grid->disableEditButton();

@@ -112,7 +112,7 @@
 
         $(document).on("click", ".wy-dele", function() {
             $currentID = $(this).attr("id");
-            $.confirm("您确定要把此商品从购物车删除吗?", "确认删除?", function() {
+            $.confirm("您确定删除吗?", function() {
                 $.ajax({
                     url: "/del_cart_item",
                     type: "post",
