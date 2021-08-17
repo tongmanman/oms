@@ -5,7 +5,6 @@ namespace App\Admin\Controllers;
 use App\Admin\Repositories\OmsUser;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
-use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
 class OmsUserController extends AdminController
@@ -28,6 +27,18 @@ class OmsUserController extends AdminController
             $grid->disableViewButton();
             $grid->disableEditButton();
             $grid->disableCreateButton();
+        });
+    }
+
+    /**
+     * Make a form builder.
+     *
+     * @return Form
+     */
+    protected function form()
+    {
+        return Form::make(new OmsUser(), function (Form $form) {
+            $form->text('is_agent');
         });
     }
 }
