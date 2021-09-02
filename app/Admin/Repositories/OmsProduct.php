@@ -20,7 +20,7 @@ class OmsProduct extends EloquentRepository
         $str = "";
         foreach (OmsProductCategory::GetChildCategory($request->CategoryID) as $ChildCategory) {
             $str .= "<h5>" . $ChildCategory->text . "</h5><ul>";
-            $Products = Model::where('category_id', $ChildCategory->id)->where('show', 1)->get();
+            $Products = Model::where('category_id', $ChildCategory->id)->where('show', 1)->orderBy('order')->get();
             foreach ($Products as $Product) {
                 $str .= "<li class='w-3'><a href='product_detail/" . $Product->id . "'></a> <img src='" . $Product->image . "'><span>" . $Product->name . "</span></li>";
             }
